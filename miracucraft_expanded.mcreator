@@ -1,0 +1,124 @@
+{
+  "mod_elements": [
+    {
+      "name": "FelixLb",
+      "type": "armor",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "felix_lb",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Suits"
+    },
+    {
+      "name": "MainHub",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_hub",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bugnoirebegin",
+      "type": "function",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bugnoirebegin",
+      "path": "~/Functions"
+    },
+    {
+      "name": "Bugnoiredivide",
+      "type": "function",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bugnoiredivide",
+      "path": "~/Functions"
+    },
+    {
+      "name": "Ladybeeunify",
+      "type": "function",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ladybeeunify",
+      "path": "~/Functions"
+    },
+    {
+      "name": "Ladybeedivide",
+      "type": "function",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ladybeedivide",
+      "path": "~/Functions"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "item.miracucraft_expanded.felix_lb_boots": "Felix Ladybug",
+      "item.miracucraft_expanded.felix_lb_leggings": "Felix Ladybug",
+      "item.miracucraft_expanded.felix_lb_chestplate": "Felix Ladybug",
+      "item.miracucraft_expanded.felix_lb_helmet": "Felix Ladybug"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Suits",
+        "children": []
+      },
+      {
+        "name": "Functions",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "miracucraft_expanded",
+    "modName": "miracucraft Expanded",
+    "version": "1.0.0",
+    "author": "carso, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "modElementsPackage": "net.mcreator.miracucraftexpanded",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202200348217
+}
