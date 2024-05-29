@@ -78,16 +78,25 @@
       "locked_code": false,
       "registry_name": "ladybeedivide",
       "path": "~/Functions"
+    },
+    {
+      "name": "Truthakumatize",
+      "type": "function",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "truthakumatize",
+      "path": "~/Functions"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.miracucraft_expanded.felix_lb_boots": "Felix Ladybug",
-      "item.miracucraft_expanded.felix_lb_leggings": "Felix Ladybug",
       "item.miracucraft_expanded.felix_lb_chestplate": "Felix Ladybug",
-      "item.miracucraft_expanded.felix_lb_helmet": "Felix Ladybug"
+      "item.miracucraft_expanded.felix_lb_helmet": "Felix Ladybug",
+      "item.miracucraft_expanded.felix_lb_boots": "Felix Ladybug",
+      "item.miracucraft_expanded.felix_lb_leggings": "Felix Ladybug"
     }
   },
   "foldersRoot": {

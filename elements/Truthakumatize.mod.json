@@ -1,0 +1,9 @@
+{
+  "_fv": 34,
+  "_type": "function",
+  "definition": {
+    "code": "team add AkumaVillain\nteam modify AkumaVillain nametagVisibility never\nteam modify AkumaVillain color dark_purple\nteam join AkumaVillain @s\nexecute as @a[team=AkumaVillain] run clear @s alucardmiracucraft:akuma_mask\nexecute as @a[team=AkumaVillain] run scale reset @s\nexecute at @a[team=AkumaVillain] run particle alucardmiracucraft:akumatized_particle ~ ~1 ~\nexecute at @a[team=AkumaVillain] run particle alucardmiracucraft:akumatized_particle ~ ~ ~\nexecute at @a[team=AkumaVillain] run particle alucardmiracucraft:akumatized_particle ~ ~0.5 ~\nexecute at @a[team=AkumaVillain] run particle alucardmiracucraft:akumatized_particle ~ ~1.5 ~\ntag @a[team=AkumaVillain] add Truth\nreplaceitem entity @a[team=AkumaVillain] armor.head miraculousrpitem:truth_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:\"minecraft:unbreaking\",lvl:3s},{id:\"minecraft:vanishing_curse\",lvl:1s}],Unbreakable:1}\nreplaceitem entity @a[team=AkumaVillain] armor.chest miraculousrpitem:truth_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:\"minecraft:unbreaking\",lvl:3s},{id:\"minecraft:vanishing_curse\",lvl:1s}],Unbreakable:1}\nreplaceitem entity @a[team=AkumaVillain] armor.legs minecraft:air\nreplaceitem entity @a[team=AkumaVillain] armor.feet miraculousrpitem:truth_boots{Enchantments:[{id:binding_curse,lvl:1},{id:\"minecraft:unbreaking\",lvl:3s},{id:\"minecraft:vanishing_curse\",lvl:1s}],Unbreakable:1}\n",
+    "name": "truthakumatize",
+    "namespace": "mod"
+  }
+}
