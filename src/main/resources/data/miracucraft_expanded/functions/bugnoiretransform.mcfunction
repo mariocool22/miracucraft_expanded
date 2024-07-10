@@ -4,10 +4,10 @@ execute as @e[sort=nearest,limit=1] run execute as @s[nbt={Inventory:[{id:"aluca
 execute as @e[sort=nearest,limit=1] run execute as @s[nbt={Inventory:[{id:"alucardmiracucraft:cat_miraculous_walker"}]}] run tag @s add CanCatBNoir
 execute as @e[sort=nearest,limit=1] run execute as @s[nbt={Inventory:[{id:"alucardmiracucraft:cat_miraculous_zoe"}]}] run tag @s add CanCatBNoir
 execute as @e[sort=nearest,limit=1] run execute as @s[nbt={Inventory:[{id:"alucardmiracucraft:ladybug_helmet"}]}] run execute as @s[tag=CanCatBNoir] run tag @s add BugnTransforming
-execute as @e[tag=BugnTransforming] run replaceitem entity @s armor.head miraculousrpitem:bugnoir_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:"minecraft:unbreaking",lvl:3s},{id:"minecraft:vanishing_curse",lvl:1s}],Unbreakable:1}
-execute as @e[tag=BugnTransforming] run replaceitem entity @s armor.chest miraculousrpitem:bugnoir_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:"minecraft:unbreaking",lvl:3s},{id:"minecraft:vanishing_curse",lvl:1s}],Unbreakable:1}
-execute as @e[tag=BugnTransforming] run replaceitem entity @s armor.legs minecraft:air
-execute as @e[tag=BugnTransforming] run replaceitem entity @s armor.feet miraculousrpitem:bugnoir_boots{Enchantments:[{id:binding_curse,lvl:1},{id:"minecraft:unbreaking",lvl:3s},{id:"minecraft:vanishing_curse",lvl:1s}],Unbreakable:1}
+execute as @e[tag=BugnTransforming] run replaceitem entity @s armor.head miracucraft_expanded:bugnoir_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:"minecraft:unbreaking",lvl:3s},{id:"minecraft:vanishing_curse",lvl:1s}],Unbreakable:1}
+execute as @e[tag=BugnTransforming] run replaceitem entity @s armor.chest miracucraft_expanded:bugnoir_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:"minecraft:unbreaking",lvl:3s},{id:"minecraft:vanishing_curse",lvl:1s}],Unbreakable:1}
+execute as @e[tag=BugnTransforming] run replaceitem entity @s armor.legs miracucraft_expanded:bugnoir_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:"minecraft:unbreaking",lvl:3s},{id:"minecraft:vanishing_curse",lvl:1s}],Unbreakable:1}
+execute as @e[tag=BugnTransforming] run replaceitem entity @s armor.feet miracucraft_expanded:bugnoir_boots{Enchantments:[{id:binding_curse,lvl:1},{id:"minecraft:unbreaking",lvl:3s},{id:"minecraft:vanishing_curse",lvl:1s}],Unbreakable:1}
 execute as @e[tag=BugnTransforming] run clear @s alucardmiracucraft:yo_yo
 execute as @e[tag=BugnTransforming] run give @s alucardmiracucraft:yo_yo_ring
 execute as @e[tag=BugnTransforming] run tag @s add UnifyPerms
@@ -26,7 +26,6 @@ execute as @e[tag=BugnTransforming] run team modify BugNoire color red
 execute as @e[tag=BugnTransforming] run team join BugNoire @s
 execute as @e[tag=BugnTransforming] run effect give @s minecraft:glowing 2 2 true
 execute as @e[tag=BugnTransforming] run execute at @s run playsound alucardmiracucraft:cat_transf master @a[distance=..7]
-execute as @e[tag=BugnTransforming] run execute at @s run effect give @s alucardmiracucraft:creation_power 999999
-execute as @e[tag=BugnTransforming] run execute at @s run effect give @s alucardmiracucraft:destruction 999999
+execute as @e[tag=BugnTransforming] run effect give @s alucardmiracucraft:creation_power 999999 1 true
 tag @e remove BugnTransforming
 tag @e remove CanCatBNoir

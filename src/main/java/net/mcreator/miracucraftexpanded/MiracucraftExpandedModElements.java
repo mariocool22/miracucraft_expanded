@@ -12,25 +12,18 @@ import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.ModList;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.tags.Tag;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.item.Item;
-import net.minecraft.entity.EntityType;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.block.Block;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;
 import java.util.Set;
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
 import java.util.Collections;
 import java.util.ArrayList;
 
@@ -39,11 +32,7 @@ import java.lang.annotation.Retention;
 
 public class MiracucraftExpandedModElements {
 	public final List<ModElement> elements = new ArrayList<>();
-	public final List<Supplier<Block>> blocks = new ArrayList<>();
 	public final List<Supplier<Item>> items = new ArrayList<>();
-	public final List<Supplier<EntityType<?>>> entities = new ArrayList<>();
-	public final List<Supplier<Enchantment>> enchantments = new ArrayList<>();
-	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 
 	public MiracucraftExpandedModElements() {
 		try {
@@ -63,11 +52,6 @@ public class MiracucraftExpandedModElements {
 		elements.forEach(MiracucraftExpandedModElements.ModElement::initElements);
 	}
 
-	public void registerSounds(RegistryEvent.Register<net.minecraft.util.SoundEvent> event) {
-		for (Map.Entry<ResourceLocation, net.minecraft.util.SoundEvent> sound : sounds.entrySet())
-			event.getRegistry().register(sound.getValue().setRegistryName(sound.getKey()));
-	}
-
 	private int messageID = 0;
 
 	public <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, PacketBuffer> encoder, Function<PacketBuffer, T> decoder,
@@ -80,20 +64,8 @@ public class MiracucraftExpandedModElements {
 		return elements;
 	}
 
-	public List<Supplier<Block>> getBlocks() {
-		return blocks;
-	}
-
 	public List<Supplier<Item>> getItems() {
 		return items;
-	}
-
-	public List<Supplier<EntityType<?>>> getEntities() {
-		return entities;
-	}
-
-	public List<Supplier<Enchantment>> getEnchantments() {
-		return enchantments;
 	}
 
 	public static class ModElement implements Comparable<ModElement> {

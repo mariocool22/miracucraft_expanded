@@ -1,21 +1,6 @@
 {
   "mod_elements": [
     {
-      "name": "FelixLb",
-      "type": "armor",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "felix_lb",
-      "metadata": {
-        "eh": true,
-        "el": true,
-        "eb": true,
-        "ec": true
-      },
-      "path": "~/Suits"
-    },
-    {
       "name": "MainHub",
       "type": "procedure",
       "sortid": 3,
@@ -25,20 +10,12 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "x",
-            "type": "number"
+            "name": "entity",
+            "type": "entity"
           },
           {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
+            "name": "text",
+            "type": "string"
           }
         ]
       }
@@ -87,16 +64,93 @@
       "locked_code": false,
       "registry_name": "truthakumatize",
       "path": "~/Functions"
+    },
+    {
+      "name": "DragonMenu",
+      "type": "gui",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_menu",
+      "path": "~/Dragon Miraculous"
+    },
+    {
+      "name": "Bugnoir",
+      "type": "armor",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bugnoir",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Suits"
+    },
+    {
+      "name": "Ladybee",
+      "type": "armor",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ladybee",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Suits"
+    },
+    {
+      "name": "Ladybeesuittick",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ladybeesuittick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Suits/Ticks"
+    },
+    {
+      "name": "BugnoirTick",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bugnoir_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Suits/Ticks"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.miracucraft_expanded.felix_lb_chestplate": "Felix Ladybug",
-      "item.miracucraft_expanded.felix_lb_helmet": "Felix Ladybug",
-      "item.miracucraft_expanded.felix_lb_boots": "Felix Ladybug",
-      "item.miracucraft_expanded.felix_lb_leggings": "Felix Ladybug"
+      "item.miracucraft_expanded.ladybee_leggings": "Ladybee",
+      "item.miracucraft_expanded.ladybee_chestplate": "Ladybee",
+      "item.miracucraft_expanded.bugnoir_leggings": "Bugnoir",
+      "item.miracucraft_expanded.bugnoir_helmet": "Bugnoir",
+      "item.miracucraft_expanded.ladybee_helmet": "Ladybee",
+      "item.miracucraft_expanded.ladybee_boots": "Ladybee",
+      "item.miracucraft_expanded.bugnoir_boots": "Bugnoir",
+      "item.miracucraft_expanded.bugnoir_chestplate": "Bugnoir"
     }
   },
   "foldersRoot": {
@@ -104,10 +158,19 @@
     "children": [
       {
         "name": "Suits",
-        "children": []
+        "children": [
+          {
+            "name": "Ticks",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Functions",
+        "children": []
+      },
+      {
+        "name": "Dragon Miraculous",
         "children": []
       }
     ]

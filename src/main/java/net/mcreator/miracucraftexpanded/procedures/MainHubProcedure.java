@@ -4,11 +4,12 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.ServerChatEvent;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.block.Blocks;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.Entity;
 
+import net.mcreator.miracucraftexpanded.item.BugnoirItem;
 import net.mcreator.miracucraftexpanded.MiracucraftExpandedMod;
 
 import java.util.Map;
@@ -36,32 +37,60 @@ public class MainHubProcedure {
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				MiracucraftExpandedMod.LOGGER.warn("Failed to load dependency world for procedure MainHub!");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				MiracucraftExpandedMod.LOGGER.warn("Failed to load dependency entity for procedure MainHub!");
 			return;
 		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				MiracucraftExpandedMod.LOGGER.warn("Failed to load dependency x for procedure MainHub!");
+		if (dependencies.get("text") == null) {
+			if (!dependencies.containsKey("text"))
+				MiracucraftExpandedMod.LOGGER.warn("Failed to load dependency text for procedure MainHub!");
 			return;
 		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				MiracucraftExpandedMod.LOGGER.warn("Failed to load dependency y for procedure MainHub!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				MiracucraftExpandedMod.LOGGER.warn("Failed to load dependency z for procedure MainHub!");
-			return;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		if ("text".contains("Tikki, Plagg, Unify!")) {
-			world.setBlockState(new BlockPos(x, y, z), Blocks.ANDESITE_WALL.getDefaultState(), 3);
+		Entity entity = (Entity) dependencies.get("entity");
+		String text = (String) dependencies.get("text");
+		if ((text).contains("Tikki, Plagg, Unify!")) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"function miracucraft_expanded:bugnoiretransform");
+				}
+			}
+		} else if ((text).contains("Spots and Claws Away")) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"function miracucraft_expanded:bugnoiredivide");
+				}
+			}
+		} else if ((text).contains("Tikki, Pollen, Unify!")) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"function miracucraft_expanded:ladybeeunify");
+				}
+			}
+		} else if ((text).contains("Divide")) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"function miracucraft_expanded:ladybeedivide");
+				}
+			}
+		} else if ((text).contains("Cataclysm!")) {
+			if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(BugnoirItem.helmet)) : false) {
+				{
+					Entity _ent = entity;
+					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+						_ent.world.getServer().getCommandManager().handleCommand(
+								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "give @s alucardmiracucraft:cataclism");
+					}
+				}
+			}
 		}
 	}
 }

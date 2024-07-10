@@ -1,0 +1,43 @@
+{
+  "_fv": 34,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "sadadsa.png",
+          "use1Xscale": true,
+          "name": "sadadsa.png",
+          "x": 47,
+          "y": 1
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Draconis",
+          "width": 67,
+          "height": 20,
+          "name": "Draconis",
+          "x": 147,
+          "y": 124
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
