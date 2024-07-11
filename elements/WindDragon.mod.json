@@ -1,0 +1,26 @@
+{
+  "_fv": 34,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Wind Dragon",
+    "icon": "dfrksin-fd9d2ea9-5896-42d2-9364-5962714db03c.png",
+    "color": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "WindDragonEffectStartedapplied"
+    },
+    "onActiveTick": {
+      "name": "WindDragontick"
+    },
+    "onExpired": {
+      "name": "WindDragonEffectExpires"
+    }
+  }
+}

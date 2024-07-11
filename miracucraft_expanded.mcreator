@@ -87,6 +87,153 @@
       "locked_code": false,
       "registry_name": "truthakumatize",
       "path": "~/Functions"
+    },
+    {
+      "name": "WindDragontick",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wind_dragontick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Dragon Forms/Wind Dragon"
+    },
+    {
+      "name": "WindDragonEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wind_dragon_effect_startedapplied",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Dragon Forms/Wind Dragon"
+    },
+    {
+      "name": "WindDragonEffectExpires",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wind_dragon_effect_expires",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Dragon Forms/Wind Dragon"
+    },
+    {
+      "name": "WindDragon",
+      "type": "potioneffect",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wind_dragon",
+      "path": "~/Dragon Forms/Wind Dragon"
+    },
+    {
+      "name": "LightningDragon",
+      "type": "potioneffect",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_dragon",
+      "path": "~/Dragon Forms/Lightning Dragon"
+    },
+    {
+      "name": "LightningDragonEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_dragon_effect_startedapplied",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Dragon Forms/Lightning Dragon"
+    },
+    {
+      "name": "LightningDragonEffectExpires",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_dragon_effect_expires",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Dragon Forms/Lightning Dragon"
     }
   ],
   "variable_elements": [],
@@ -94,9 +241,11 @@
   "language_map": {
     "en_us": {
       "item.miracucraft_expanded.felix_lb_chestplate": "Felix Ladybug",
+      "effect.lightning_dragon": "Lightning Dragon",
       "item.miracucraft_expanded.felix_lb_helmet": "Felix Ladybug",
       "item.miracucraft_expanded.felix_lb_boots": "Felix Ladybug",
-      "item.miracucraft_expanded.felix_lb_leggings": "Felix Ladybug"
+      "item.miracucraft_expanded.felix_lb_leggings": "Felix Ladybug",
+      "effect.wind_dragon": "Wind Dragon"
     }
   },
   "foldersRoot": {
@@ -109,6 +258,23 @@
       {
         "name": "Functions",
         "children": []
+      },
+      {
+        "name": "Dragon Forms",
+        "children": [
+          {
+            "name": "Wind Dragon",
+            "children": []
+          },
+          {
+            "name": "Water Dragon",
+            "children": []
+          },
+          {
+            "name": "Lightning Dragon",
+            "children": []
+          }
+        ]
       }
     ]
   },
