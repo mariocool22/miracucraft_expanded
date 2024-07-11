@@ -1,21 +1,6 @@
 {
   "mod_elements": [
     {
-      "name": "FelixLb",
-      "type": "armor",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "felix_lb",
-      "metadata": {
-        "eh": true,
-        "el": true,
-        "eb": true,
-        "ec": true
-      },
-      "path": "~/Suits"
-    },
-    {
       "name": "MainHub",
       "type": "procedure",
       "sortid": 3,
@@ -89,33 +74,13 @@
       "path": "~/Functions"
     },
     {
-      "name": "WindDragontick",
-      "type": "procedure",
-      "sortid": 9,
+      "name": "LightningDragon",
+      "type": "potioneffect",
+      "sortid": 14,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "wind_dragontick",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dragon Forms/Wind Dragon"
+      "registry_name": "lightning_dragon",
+      "path": "~/Dragon Forms/Lightning Dragon"
     },
     {
       "name": "WindDragonEffectStartedapplied",
@@ -152,24 +117,6 @@
       "path": "~/Dragon Forms/Wind Dragon"
     },
     {
-      "name": "WindDragon",
-      "type": "potioneffect",
-      "sortid": 10,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wind_dragon",
-      "path": "~/Dragon Forms/Wind Dragon"
-    },
-    {
-      "name": "LightningDragon",
-      "type": "potioneffect",
-      "sortid": 14,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lightning_dragon",
-      "path": "~/Dragon Forms/Lightning Dragon"
-    },
-    {
       "name": "LightningDragonEffectStartedapplied",
       "type": "procedure",
       "sortid": 15,
@@ -203,6 +150,44 @@
       "path": "~/Dragon Forms/Lightning Dragon"
     },
     {
+      "name": "WindDragontick",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wind_dragontick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Dragon Forms/Wind Dragon"
+    },
+    {
+      "name": "WindDragon",
+      "type": "potioneffect",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wind_dragon",
+      "path": "~/Dragon Forms/Wind Dragon"
+    },
+    {
       "name": "LightningDragonEffectExpires",
       "type": "procedure",
       "sortid": 16,
@@ -234,6 +219,79 @@
         ]
       },
       "path": "~/Dragon Forms/Lightning Dragon"
+    },
+    {
+      "name": "Ladybee",
+      "type": "armor",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ladybee",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Suits"
+    },
+    {
+      "name": "BugnoirTick",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bugnoir_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Suits/Ticks"
+    },
+    {
+      "name": "DragonMenu",
+      "type": "gui",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_menu",
+      "path": "~/Dragon Miraculous"
+    },
+    {
+      "name": "Ladybeesuittick",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ladybeesuittick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Suits/Ticks"
+    },
+    {
+      "name": "Bugnoir",
+      "type": "armor",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bugnoir",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Suits"
     }
   ],
   "variable_elements": [],
@@ -241,20 +299,14 @@
   "language_map": {
     "en_us": {
       "item.miracucraft_expanded.felix_lb_chestplate": "Felix Ladybug",
-      "effect.lightning_dragon": "Lightning Dragon",
       "item.miracucraft_expanded.felix_lb_helmet": "Felix Ladybug",
       "item.miracucraft_expanded.felix_lb_boots": "Felix Ladybug",
-      "item.miracucraft_expanded.felix_lb_leggings": "Felix Ladybug",
-      "effect.wind_dragon": "Wind Dragon"
+      "item.miracucraft_expanded.felix_lb_leggings": "Felix Ladybug"
     }
   },
   "foldersRoot": {
     "name": "~",
     "children": [
-      {
-        "name": "Suits",
-        "children": []
-      },
       {
         "name": "Functions",
         "children": []
@@ -275,6 +327,19 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "Suits",
+        "children": [
+          {
+            "name": "Ticks",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Dragon Miraculous",
+        "children": []
       }
     ]
   },

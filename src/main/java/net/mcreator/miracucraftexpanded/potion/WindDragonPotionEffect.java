@@ -1,29 +1,9 @@
 
 package net.mcreator.miracucraftexpanded.potion;
 
-import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
-
-import net.minecraft.world.World;
-import net.minecraft.potion.EffectType;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effect;
-import net.minecraft.entity.ai.attributes.AttributeModifierManager;
-import net.minecraft.entity.LivingEntity;
-
-import net.mcreator.miracucraftexpanded.procedures.WindDragontickProcedure;
-import net.mcreator.miracucraftexpanded.procedures.WindDragonEffectStartedappliedProcedure;
-import net.mcreator.miracucraftexpanded.procedures.WindDragonEffectExpiresProcedure;
-
-import java.util.stream.Stream;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.AbstractMap;
-
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class WindDragonPotionEffect {
+
 	@ObjectHolder("miracucraft_expanded:wind_dragon")
 	public static final Effect potion = null;
 
@@ -33,6 +13,7 @@ public class WindDragonPotionEffect {
 	}
 
 	public static class EffectCustom extends Effect {
+
 		public EffectCustom() {
 			super(EffectType.NEUTRAL, -1);
 			setRegistryName("wind_dragon");
@@ -108,5 +89,7 @@ public class WindDragonPotionEffect {
 		public boolean isReady(int duration, int amplifier) {
 			return true;
 		}
+
 	}
+
 }

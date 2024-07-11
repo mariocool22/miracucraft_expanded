@@ -1,28 +1,9 @@
 
 package net.mcreator.miracucraftexpanded.potion;
 
-import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
-
-import net.minecraft.world.World;
-import net.minecraft.potion.EffectType;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effect;
-import net.minecraft.entity.ai.attributes.AttributeModifierManager;
-import net.minecraft.entity.LivingEntity;
-
-import net.mcreator.miracucraftexpanded.procedures.LightningDragonEffectStartedappliedProcedure;
-import net.mcreator.miracucraftexpanded.procedures.LightningDragonEffectExpiresProcedure;
-
-import java.util.stream.Stream;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.AbstractMap;
-
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class LightningDragonPotionEffect {
+
 	@ObjectHolder("miracucraft_expanded:lightning_dragon")
 	public static final Effect potion = null;
 
@@ -32,6 +13,7 @@ public class LightningDragonPotionEffect {
 	}
 
 	public static class EffectCustom extends Effect {
+
 		public EffectCustom() {
 			super(EffectType.NEUTRAL, -1);
 			setRegistryName("lightning_dragon");
@@ -74,10 +56,7 @@ public class LightningDragonPotionEffect {
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 
-			LightningDragonEffectStartedappliedProcedure.executeProcedure(Stream
-					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
-					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+			LightningDragonEffectStartedappliedProcedure.executeProcedure(Collections.emptyMap());
 		}
 
 		@Override
@@ -88,15 +67,14 @@ public class LightningDragonPotionEffect {
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 
-			LightningDragonEffectExpiresProcedure.executeProcedure(Stream
-					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
-					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+			LightningDragonEffectExpiresProcedure.executeProcedure(Collections.emptyMap());
 		}
 
 		@Override
 		public boolean isReady(int duration, int amplifier) {
 			return true;
 		}
+
 	}
+
 }

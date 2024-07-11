@@ -1,4 +1,4 @@
-// Made with Blockbench 4.8.3
+// Made with Blockbench 4.9.3
 // Exported for Minecraft version 1.15 - 1.16 with MCP mappings
 // Paste this class into your mod and generate all required imports
 
@@ -24,12 +24,12 @@ public static class ModelLadybee extends EntityModel<Entity> {
 	private final ModelRenderer LeftLeg;
 
 	public ModelLadybee() {
-		textureWidth = 64;
-		textureHeight = 64;
+		textureWidth = 128;
+		textureHeight = 128;
 
 		Head = new ModelRenderer(this);
 		Head.setRotationPoint(0.0F, 0.0F, 0.0F);
-		Head.setTextureOffset(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.0F, false);
+		Head.setTextureOffset(22, 53).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.0F, false);
 		Head.setTextureOffset(46, 38).addBox(-4.878F, -5.0F, -0.85F, 2.0F, 2.0F, 2.0F, -0.7024F, false);
 		Head.setTextureOffset(30, 46).addBox(-4.878F, -5.0F, -1.15F, 2.0F, 2.0F, 2.0F, -0.7024F, false);
 		Head.setTextureOffset(24, 4).addBox(-5.0976F, -5.0F, -1.0F, 2.0F, 2.0F, 2.0F, -0.8976F, false);
@@ -168,6 +168,12 @@ public static class ModelLadybee extends EntityModel<Entity> {
 	}
 
 	@Override
+	public void setRotationAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks,
+			float netHeadYaw, float headPitch) {
+		// previously the render function, render code was moved to a method below
+	}
+
+	@Override
 	public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red,
 			float green, float blue, float alpha) {
 		Head.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
@@ -182,8 +188,5 @@ public static class ModelLadybee extends EntityModel<Entity> {
 		modelRenderer.rotateAngleX = x;
 		modelRenderer.rotateAngleY = y;
 		modelRenderer.rotateAngleZ = z;
-	}
-
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity e) {
 	}
 }

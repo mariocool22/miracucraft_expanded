@@ -1,0 +1,61 @@
+{
+  "_fv": 34,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "depx0iy-112e7fbc-1ae2-4b76-b81f-918673368664",
+    "enableBody": true,
+    "textureBody": "depx0iy-112e7fbc-1ae2-4b76-b81f-918673368664",
+    "enableLeggings": true,
+    "textureLeggings": "depx0iy-112e7fbc-1ae2-4b76-b81f-918673368664",
+    "enableBoots": true,
+    "textureBoots": "depx0iy-112e7fbc-1ae2-4b76-b81f-918673368664",
+    "onHelmetTick": {
+      "name": "Ladybeesuittick"
+    },
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "armorTextureFile": "ladybee_",
+    "helmetName": "Ladybee",
+    "bodyName": "Ladybee",
+    "leggingsName": "Ladybee",
+    "bootsName": "Ladybee",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "ModelLadybee",
+    "helmetModelPart": "Head",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "ModelLadybee",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "LeftArm",
+    "armsModelPartR": "RightArm",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "ModelLadybee",
+    "leggingsModelPartL": "LeftLeg",
+    "leggingsModelPartR": "RightLeg",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "ModelLadybee",
+    "bootsModelPartL": "LeftLeg",
+    "bootsModelPartR": "RightLeg",
+    "bootsModelTexture": "From armor",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 25,
+    "damageValueHelmet": 2,
+    "damageValueBody": 6,
+    "damageValueLeggings": 5,
+    "damageValueBoots": 2,
+    "enchantability": 9,
+    "toughness": 0.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": ""
+    },
+    "repairItems": []
+  }
+}

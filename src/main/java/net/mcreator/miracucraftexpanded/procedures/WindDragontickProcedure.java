@@ -1,12 +1,6 @@
 package net.mcreator.miracucraftexpanded.procedures;
 
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.IWorld;
-import net.minecraft.particles.ParticleTypes;
-
-import net.mcreator.miracucraftexpanded.MiracucraftExpandedMod;
-
-import java.util.Map;
+import net.minecraftforge.eventbus.api.Event;
 
 public class WindDragontickProcedure {
 
@@ -31,10 +25,12 @@ public class WindDragontickProcedure {
 				MiracucraftExpandedMod.LOGGER.warn("Failed to load dependency z for procedure WindDragontick!");
 			return;
 		}
+
 		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+
 		double xRadius = 0;
 		double loop = 0;
 		double zRadius = 0;
@@ -47,4 +43,5 @@ public class WindDragontickProcedure {
 			((ServerWorld) world).spawnParticle(ParticleTypes.SMOKE, x, y, z, (int) 150, 3, 3, 3, 1);
 		}
 	}
+
 }

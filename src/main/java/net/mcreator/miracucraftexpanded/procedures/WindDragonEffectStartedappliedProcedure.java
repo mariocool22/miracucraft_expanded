@@ -1,12 +1,6 @@
 package net.mcreator.miracucraftexpanded.procedures;
 
-import net.minecraft.world.GameType;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.Entity;
-
-import net.mcreator.miracucraftexpanded.MiracucraftExpandedMod;
-
-import java.util.Map;
+import net.minecraftforge.eventbus.api.Event;
 
 public class WindDragonEffectStartedappliedProcedure {
 
@@ -16,8 +10,11 @@ public class WindDragonEffectStartedappliedProcedure {
 				MiracucraftExpandedMod.LOGGER.warn("Failed to load dependency entity for procedure WindDragonEffectStartedapplied!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
+
 		if (entity instanceof PlayerEntity)
 			((PlayerEntity) entity).setGameType(GameType.SPECTATOR);
 	}
+
 }
